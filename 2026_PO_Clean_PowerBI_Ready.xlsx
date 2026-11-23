@@ -1,0 +1,9 @@
+import numpy as np
+import pandas as pd
+
+file_path = "2026_PO_Clean_PowerBI_Ready.xlsx"
+xls = pd.ExcelFile(file_path)
+print("Sheets:", xls.sheet_names)
+
+df = pd.read_excel(file_path, sheet_name="Master_PO_Data")
+print("Total rows:", len(df))
